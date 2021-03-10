@@ -1,0 +1,17 @@
+<table class="table table-md table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>List of Selected Jokes</th>
+    </tr>
+  </thead>
+  <tbody >
+    <tr *ngFor="let j of jokesSelected">
+      <td><button type="button" class="close p-0 m-0" aria-label="Close" (click)="removeFromFavorites(j)">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </td>
+      <td>{{j}}</td>
+    </tr>
+  </tbody>
+</table>

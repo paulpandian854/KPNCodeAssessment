@@ -1,0 +1,18 @@
+<table class="table table-sm table-striped">
+    <thead>
+      <tr>
+        <th>Selector for Favorites</th>
+        <th>List of Jokes</th>
+      </tr>
+    </thead>
+    <tbody >
+      <tr *ngFor="let jok of jokes">
+        <td>
+          <button type="button" class="btn btn-sm" aria-label="Left Align"  (click)="checkBoxClick(jok.joke)">
+            <span class="glyphicon glyphicon-align-left" aria-hidden="true"><></span>
+            </button>
+        </td>
+        <td>{{jok.joke}}</td>
+      </tr>
+    </tbody>
+  </table>

@@ -1,0 +1,17 @@
+<div style="text-align:center" class="container-fluid">
+    <h1>
+      Welcome to {{title}}!
+      <button id="autoPopulateFavorites" class="btn btn-primary" (click)="autoPopulateFavorites()">Auto Populate Favorites</button>
+      <button id="timeAddFavorites" class="ml-5 btn btn-primary" (click)="timeAddFavorites()">Auto Populate Every 5 seconds</button>
+    </h1>
+
+    <!--Table to load the list of jokes--> 
+    <chuck-table [jokes]="jokes" (checkBoxClickEvent)="checkBoxClick($event)"></chuck-table>
+
+    <h1>Favorite Jokes
+      <button class="btn btn-primary" (click)="removePopulateFavorites()">Remove Populated Favorites</button>
+      <button class="ml-5 btn btn-primary" (click)="stopAutoPopulate()">Pause Interval Population</button>
+    </h1> 
+    <!--Table to load the list of favorite jokes--> 
+    <chuck-favorites [jokesSelected]="jokesSelected" (removeFromFavoritesEvent)="removeFromFavorites($event)"></chuck-favorites>
+  </div>
